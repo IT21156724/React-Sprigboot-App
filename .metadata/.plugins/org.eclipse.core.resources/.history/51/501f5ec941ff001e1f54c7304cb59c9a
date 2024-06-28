@@ -1,0 +1,7 @@
+spring.application.name=ShapeBuddy-Backend
+
+spring.datasource.url=jdbc:mysql://localhost:3306/shapebuddydb
+spring.datasource.username=localhost
+spring.datasource.password=Wgpsds19991213
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
