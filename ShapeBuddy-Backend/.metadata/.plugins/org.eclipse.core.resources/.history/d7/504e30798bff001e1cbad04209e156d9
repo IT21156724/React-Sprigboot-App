@@ -1,0 +1,30 @@
+package com.example.ShapeBuddyBackend.Service;
+
+import java.util.ArrayList;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.ShapeBuddyBackend.Entity.Post;
+import com.example.ShapeBuddyBackend.Repository.PostRepo;
+
+@Service
+public class PostService {
+	
+	@Autowired
+	PostRepo postRepo;
+
+	public Post submitPostToDataBase(Post post) {
+		return postRepo.save(post);
+	}
+	
+	public ArrayList<Post> retrivePostFromDB(){
+		return postRepo.findAll();
+	}
+	
+	// New method to delete a post by ID
+    public void deletePostById(Integer postId) {
+        postRepo.deleteById(postId);
+    }
+	
+}
